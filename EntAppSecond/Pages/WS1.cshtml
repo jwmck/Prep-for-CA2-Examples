@@ -1,0 +1,26 @@
+﻿@page
+@model Week2WS.Pages.WS1Model
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "WS1";
+}
+
+<ul>
+
+    @foreach (string country in @Model.MyTestArray)
+    {
+        <li>@country</li>
+    }
+
+</ul>
+
+<form method="post">
+
+    <label asp-for=FirstName>Enter your first name</label>
+    <input asp-for=FirstName />
+
+    <button type="submit">Press Here</button>
+</form>
+
+<h1>@Model.Message</h1>
+

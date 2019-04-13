@@ -1,0 +1,96 @@
+﻿@page
+@model Week2WS.Pages.taghelpplayModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Tag Help Play";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> taghelpplay </title>
+</head>
+
+<body>
+    @*<label asp-for=Number1>Enter your first number</label>
+    <input asp-for=Number1 />
+    <label asp-for=Number2>Enter your second number</label>
+    <input asp-for=Number2 />
+    <label asp-for=Double>Enter your first Double</label>
+    <input asp-for=Double />
+    <label asp-for=Double2>Enter your second Double</label>
+    <input asp-for=Double2 />
+    <label asp-for=Decimal>Enter your first Decimal</label>
+    <input asp-for=Decimal />
+    <label asp-for=Decimal2>Enter your second Decimal</label>
+    <input asp-for=Decimal2 />
+    <label asp-for=Float>Enter your first Float</label>
+    <input asp-for=Float />
+    <label asp-for=Float2>Enter your second Float</label>
+    <input asp-for=Float2 />
+    <label asp-for=String>Enter a string</label>
+    <input asp-for=String />
+    <label asp-for=DateTime>Enter a DateTime</label>
+    <input asp-for=DateTime />
+    <label asp-for=DateTime2>Enter a DateTime</label>
+    <input asp-for=DateTime2 />
+    <label asp-for=isContactAllowed>Enter a Bool</label>
+    <input asp-for=isContactAllowed />*@
+
+    @*The below is an form using inline buttons and bootstrap*@
+
+    @*<form method="post">
+        <fieldset>
+            <legend>Choose your favourite season</legend>
+            <label for="Winter" class="radio-inline">
+                <input value="Winter" id="Winter" type="radio" asp-for=Season> Winter
+            </label>
+            <label for="Autumn" class="radio-inline">
+                <input value="Autumn" id="Autumn" type="radio" asp-for=Season> Autumn
+            </label>
+            <label for="Spring" class="radio-inline">
+                <input value="Spring" id="Spring" type="radio" asp-for=Season> Spring
+            </label>
+            <label for="Summer" class="radio-inline">
+                <input value="Summer" id="Summer" type="radio" asp-for=Season> Summer
+            </label>
+        </fieldset>
+        <button type="submit" class="btn btn-default" style="margin-top: 5px;"> Submit</button>
+    </form>
+    <h2>@Model.Message</h2>*@
+
+    @*The below is an form using vertically aligned buttons and bootstrap*@
+
+    <form method="post">
+            <fieldset>
+                <legend>Choose your favourite season</legend>
+                <div class="radio">
+                    <label for="Winter" class="radio">
+                        <input value="Winter" type="radio" id="Winter" asp-for="Season"> Winter
+                    </label>
+                </div>
+                <div class="radio">
+                    <label for="Autumn" class="radio">
+                        <input value="Autumn" type="radio" id="Autumn" asp-for="Season"> Autumn
+                    </label>
+                </div>
+                <div class="radio">
+                    <label for="Summer" class="radio">
+                        <input value="Summer" type="radio" id="Summer" asp-for="Season"> Summer
+                    </label>
+                </div>
+                <div class="radio">
+                    <label for="Spring" class="radio-inline">
+                        <input value="Spring" type="radio" id="Spring" asp-for="Season"> Spring
+                    </label>
+                </div>
+                <button style="margin-top: 5px;" type="submit" class="btn btn-default"> Submit</button>
+            </fieldset>
+        </form>
+        <h2>@Model.Message</h2>
+
+</body>
+
+</html>
+

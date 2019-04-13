@@ -1,0 +1,27 @@
+﻿@page
+@model EntApp1.Pages.Page1Model
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Hello from a cshtml  page</h1>
+    <h2>@Model.Message</h2>
+
+    <form method="post">
+
+        <label for="number1">Number 1</label>
+        <input  id="number1" name="number1" value=@Model.Number1 />
+
+
+        <button type="submit">Press Me to see what happens</button>
+    </form>
+
+</body>
+</html>

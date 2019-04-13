@@ -1,0 +1,33 @@
+﻿@page
+@model TestApp1.Pages.page1Model
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>page1</title>
+    <link href="~/CSS/StyleSheet.css" rel="stylesheet" />
+</head>
+<body onload="getMessage()">
+    <h1>Goodbye from the CSHTML page.</h1>
+    <h2>It is @DateTime.Now</h2>
+    <h3 id="timeTest">Test</h3>
+    <script type="text/javascript">
+        function getMessage() {
+            var dateNow = new Date();
+            var message;
+            var hourNumber = dateNow.getUTCHours();
+            if (hourNumber < 12) {
+                document.getElementById("timeTest").innerHTML = "Good Morning!";
+            }
+            else {
+                document.getElementById("timeTest").innerHTML = "Good Evening!";
+            }
+        }
+    </script>
+</body>
+</html>

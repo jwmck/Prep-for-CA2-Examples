@@ -1,0 +1,48 @@
+﻿@page
+@model Week2WS.Pages.WS1BModel
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+        ViewData["Title"] = "WS1B";
+    }
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset = "utf-8" />
+        < title > WS1B </ title >
+    </head >
+    <body >
+
+        <form method="post">
+
+            <label asp-for=Number1>Number 1</label>
+            <input id="number1" name="number1" value=@Model.Number1 />
+
+            <label asp-for=Number2>Number 2</label>
+            <input id="number2" name="number2" value=@Model.Number2 />
+
+            <fieldset>
+                <legend>Choose your operation</legend>
+                <input type="radio" name="operation" value="plus" id="plus" /><label for="plus">Plus</label>
+                <input type="radio" name="operation" value="minus" id="minus" /><label for="minus">Minus</label>
+                <input type="radio" name="operation" value="multiply" id="multiply" /><label for="multiply">Multiply</label>
+                <input type="radio" name="operation" value="divide" id="divide" /><label for="divide">Divide</label>
+            </fieldset>
+
+            @* see below for initial attempt - did not work, buttons couldn't be given individual values *@
+
+            @* @foreach(var item in Model.Operators)
+                 {
+                    <label asp-for=@item> @item </label>
+                    <input asp-for=SelectedOperator name="@item" type="radio" value="@Model.Operators" />
+                 }
+
+                <button type = "submit" > Press Me to see what happens</button>*@
+
+            <button type="submit"> Press Me to see what happens</button>
+        </form>
+
+        <h2>@Model.Message</h2>
+
+    </body>
+    </html >
